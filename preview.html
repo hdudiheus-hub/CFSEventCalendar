@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CF Sport Athlete Commerce Platform Preview</title>
+  <meta name="description" content="Standalone preview for the CF Sport athlete commerce platform visual." />
+  <style>
+    :root { --bg: #07090d; --panel: #111722; --panel-strong: #182232; --text: #f7fafc; --muted: #a7b0bf; --accent: #e31b23; --accent-2: #f6c945; --line: rgba(255,255,255,.11); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at top left, rgba(227,27,35,.22), transparent 32rem), var(--bg); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .main { overflow: hidden; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
+    .brand { font-weight: 900; letter-spacing: .08em; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; gap: 20px; color: var(--muted); font-size: 14px; }
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 42px; align-items: center; padding: 74px 0 86px; }
+    .eyebrow { color: var(--accent-2); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; }
+    h1 { margin: 14px 0 18px; font-size: clamp(44px, 7vw, 86px); line-height: .94; letter-spacing: -.06em; }
+    .lede { color: var(--muted); font-size: 19px; line-height: 1.65; max-width: 680px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .button { border: 1px solid var(--line); border-radius: 999px; padding: 14px 20px; font-weight: 800; }
+    .button.primary { background: var(--accent); border-color: var(--accent); }
+    .hero-card { background: linear-gradient(145deg, var(--panel), var(--panel-strong)); border: 1px solid var(--line); border-radius: 30px; padding: 26px; box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+    .metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .metric { border: 1px solid var(--line); border-radius: 20px; padding: 18px; background: rgba(255,255,255,.035); }
+    .metric strong { display: block; font-size: 28px; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    section { padding: 64px 0; }
+    .section-title { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
+    h2 { font-size: clamp(30px, 4vw, 50px); margin: 0; letter-spacing: -.04em; }
+    .section-title p { max-width: 520px; color: var(--muted); line-height: 1.6; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); border-radius: 24px; padding: 24px; background: rgba(17,23,34,.74); }
+    .card h3 { margin-top: 0; }
+    .card p, .card li { color: var(--muted); line-height: 1.55; }
+    .card ul { padding-left: 20px; }
+    .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .flow-step { border: 1px solid var(--line); border-radius: 18px; padding: 18px; background: rgba(227,27,35,.08); }
+    .flow-step span { color: var(--accent-2); font-weight: 900; }
+    .dashboard { display: grid; grid-template-columns: .85fr 1.15fr; gap: 20px; }
+    .table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 18px; }
+    .table th, .table td { border-bottom: 1px solid var(--line); padding: 16px; text-align: left; }
+    .table th { color: var(--accent-2); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+    .table td { color: var(--muted); }
+    .footer { border-top: 1px solid var(--line); color: var(--muted); padding: 28px 0 44px; }
+    @media (max-width: 900px) { .hero, .dashboard { grid-template-columns: 1fr; } .cards, .flow { grid-template-columns: repeat(2, 1fr); } .navlinks { display: none; } }
+    @media (max-width: 620px) { .cards, .flow, .metric-grid { grid-template-columns: 1fr; } .section-title { display: block; } }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <nav class="nav" aria-label="Primary navigation"><div class="brand">CF <span>SPORT</span></div><div class="navlinks"><a href="#platform">Platform</a><a href="#crm">CRM</a><a href="#dashboards">Dashboards</a><a href="#roadmap">Roadmap</a></div></nav>
+      <section class="hero"><div><p class="eyebrow">Athlete commerce ecosystem</p><h1>Turn fighter influence into trackable supplement revenue.</h1><p class="lede">CF Sport unites branded fighter pages, affiliate attribution, CRM retention, content approvals, and sponsor reporting in one scalable direct-to-consumer platform.</p><div class="actions"><a class="button primary" href="#platform">Explore the system</a><a class="button" href="#dashboards">View reporting model</a></div></div><aside class="hero-card" aria-label="Platform performance snapshot"><p class="eyebrow">Live ecosystem snapshot</p><div class="metric-grid"><div class="metric"><strong>24</strong><span>active fighters</span></div><div class="metric"><strong>11.2K</strong><span>attributed customers</span></div><div class="metric"><strong>8.1%</strong><span>landing conversion</span></div><div class="metric"><strong>3.4x</strong><span>retargeting ROAS</span></div></div></aside></section>
+    </div>
+    <section id="platform" class="container"><div class="section-title"><h2>Built around fighters, fans, and transparent commerce.</h2><p>The main CF Sport hub remains the commerce engine while each athlete receives a branded funnel that grows their personal brand and measures sales impact.</p></div><div class="cards"><article class="card"><h3>Fighter storefronts</h3><p>Personalized landing pages pair athlete stories, product stacks, media, sponsor inventory, and fighter-specific affiliate links.</p></article><article class="card"><h3>Attribution engine</h3><p>Coupon codes, referral parameters, affiliate IDs, and repeat-purchase tracking connect every sale to the right athlete.</p></article><article class="card"><h3>CRM automation</h3><p>Welcome sequences, education drips, reorder reminders, cart recovery, and fight-camp campaigns keep customers engaged.</p></article></div></section>
+    <section class="container"><div class="section-title"><h2>Athlete commerce flow</h2><p>From social post to repeat purchase, every step is captured for CF Sport, fighters, sponsors, and promoters.</p></div><div class="flow"><div class="flow-step"><span>01</span><h3>Fighter shares content</h3></div><div class="flow-step"><span>02</span><h3>Fan visits branded page</h3></div><div class="flow-step"><span>03</span><h3>Checkout records attribution</h3></div><div class="flow-step"><span>04</span><h3>Dashboards and CRM update</h3></div></div></section>
+    <section id="crm" class="container"><div class="cards"><article class="card"><h3>Customer CRM</h3><ul><li>Profiles with source fighter, purchase history, interests, and phone/email fields.</li><li>Automated welcome, product education, recovery tips, and upsell sequences.</li><li>Retention segments based on last purchase, AOV, product preferences, and repeat rate.</li></ul></article><article class="card"><h3>Fighter CRM</h3><ul><li>Sales, commissions, traffic, conversion rate, top products, and returning customers.</li><li>Media library for photos, videos, logos, sponsor graphics, and promotional assets.</li><li>Calendar integration for camps, launches, content days, obligations, and appearances.</li></ul></article><article class="card"><h3>Content approvals</h3><ul><li>Draft, internal review, sponsor review, athlete review, approval, and publication workflow.</li><li>Shared workspace for CF Sport, fighters, managers, sponsors, and the marketing team.</li><li>AI assistance for captions, product descriptions, emails, blogs, FAQs, and recommendations.</li></ul></article></div></section>
+    <section id="dashboards" class="container dashboard"><div class="card"><p class="eyebrow">Admin dashboard</p><h2>Revenue, rankings, products, acquisition, and ads in one command center.</h2><p>CF Sport can compare product performance, customer acquisition, ad efficiency, and fighter-generated revenue without losing the details sponsors need for ROI reporting.</p></div><div class="card"><table class="table" aria-label="Sample fighter performance table"><thead><tr><th>Fighter</th><th>Code</th><th>Revenue</th><th>Conv.</th></tr></thead><tbody><tr><td>Akeem Cheatham</td><td>AKEEM10</td><td>$18.4K</td><td>7.8%</td></tr><tr><td>Torres</td><td>TORRES10</td><td>$12.1K</td><td>6.4%</td></tr><tr><td>Gallegos</td><td>GALLEGOS10</td><td>$9.7K</td><td>5.9%</td></tr></tbody></table></div></section>
+    <section id="roadmap" class="container"><div class="section-title"><h2>Launch roadmap</h2><p>Ship the foundation first, then expand content, paid media, optimization, and fighter onboarding at scale.</p></div><div class="cards"><article class="card"><p class="eyebrow">Phase 1</p><p>Website architecture, fighter onboarding, affiliate mapping, CRM data model</p></article><article class="card"><p class="eyebrow">Phase 2</p><p>Commerce site, fighter pages, dashboards, shared workspace, workflows</p></article><article class="card"><p class="eyebrow">Phase 3</p><p>Monthly content engine, social campaigns, fighter assets, paid ads</p></article></div></section>
+    <footer class="footer"><div class="container">CF Sport Athlete Commerce Platform — supplement sales, fighter branding, CRM automation, and sponsorship reporting.</div></footer>
+  </main>
+</body>
+</html>
