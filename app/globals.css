@@ -147,6 +147,107 @@ h2 { font-size: clamp(30px, 4vw, 50px); margin: 0; letter-spacing: -0.04em; }
 
 .flow-step span { color: var(--accent-2); font-weight: 900; }
 
+.context-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 80% 32%, rgba(18, 190, 224, 0.12), transparent 30rem),
+    radial-gradient(circle at 15% 80%, rgba(150, 68, 255, 0.12), transparent 28rem),
+    #0a0d13;
+  border-block: 1px solid var(--line);
+}
+
+.context-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 54px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+.context-intro h2 { max-width: 780px; }
+.context-intro > p { color: var(--muted); line-height: 1.7; margin: 0 0 5px; }
+
+.context-stack {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+  position: relative;
+}
+
+.context-stack::before {
+  content: '';
+  position: absolute;
+  left: 74px;
+  top: 70px;
+  bottom: 70px;
+  width: 2px;
+  background: linear-gradient(#ffac36, #1fd9ff 50%, #aa62ff);
+  box-shadow: 0 0 20px currentColor;
+}
+
+.context-layer {
+  --layer-color: #ffac36;
+  min-height: 184px;
+  display: grid;
+  grid-template-columns: 96px 190px 1fr;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background: linear-gradient(110deg, #222a35, #10151e 65%);
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.09);
+}
+
+.context-layer.cyan { --layer-color: #1fd9ff; }
+.context-layer.violet { --layer-color: #aa62ff; }
+
+.layer-number {
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 27px;
+  font-weight: 900;
+  border-right: 1px solid var(--line);
+}
+
+.layer-core { position: relative; border-right: 1px solid var(--line); overflow: hidden; }
+.core-light { position: absolute; inset: 0; background: radial-gradient(circle, var(--layer-color), transparent 68%); opacity: 0.5; }
+.core-grid {
+  position: absolute;
+  inset: 18px;
+  border: 1px solid var(--layer-color);
+  border-radius: 8px;
+  opacity: 0.7;
+  background-image: radial-gradient(circle, var(--layer-color) 1.2px, transparent 1.5px);
+  background-size: 9px 9px;
+  box-shadow: inset 0 0 24px var(--layer-color), 0 0 18px color-mix(in srgb, var(--layer-color) 65%, transparent);
+}
+
+.layer-content { padding: 24px 28px; position: relative; }
+.layer-kicker { margin: 0 0 4px; color: var(--layer-color) !important; text-transform: uppercase; font-size: 11px; font-weight: 900; letter-spacing: 0.14em; }
+.layer-content h3 { font-size: 25px; margin: 0 0 8px; }
+.layer-content > p { color: var(--muted); line-height: 1.5; margin: 0; max-width: 570px; }
+.layer-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.layer-tags span { padding: 6px 9px; border: 1px solid color-mix(in srgb, var(--layer-color) 45%, transparent); border-radius: 999px; color: #dbe1eb; font-size: 11px; }
+
+.context-outcome {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(920px, 100%);
+  margin: 22px auto 0;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.context-outcome span { color: var(--accent-2); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+.context-outcome strong { color: var(--text); }
+
 .dashboard {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -177,6 +278,7 @@ h2 { font-size: clamp(30px, 4vw, 50px); margin: 0; letter-spacing: -0.04em; }
 
 @media (max-width: 900px) {
   .hero, .dashboard { grid-template-columns: 1fr; }
+  .context-intro { grid-template-columns: 1fr; gap: 18px; }
   .cards, .flow { grid-template-columns: repeat(2, 1fr); }
   .navlinks { display: none; }
 }
@@ -184,4 +286,10 @@ h2 { font-size: clamp(30px, 4vw, 50px); margin: 0; letter-spacing: -0.04em; }
 @media (max-width: 620px) {
   .cards, .flow, .metric-grid { grid-template-columns: 1fr; }
   .section-title { display: block; }
+  .context-layer { grid-template-columns: 64px 1fr; }
+  .layer-core { display: none; }
+  .context-stack::before { left: 31px; }
+  .layer-content { padding: 20px; }
+  .context-outcome { display: block; }
+  .context-outcome strong { display: block; margin-top: 10px; line-height: 1.5; }
 }

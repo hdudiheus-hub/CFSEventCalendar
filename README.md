@@ -26,3 +26,13 @@ The prototype presents CF Sport as a fighter-powered commerce ecosystem with:
 - Platform cards for fighter storefronts, affiliate attribution, and CRM automation.
 - An athlete commerce flow from fighter content through checkout attribution and CRM follow-up.
 - CRM, fighter dashboard, content approval, sponsor reporting, and launch roadmap sections.
+
+## Visual preview
+
+The AI context architecture is rendered directly by the website rather than stored as a binary preview. Start the
+development server and open [`http://localhost:3000/#context`](http://localhost:3000/#context) to review the live,
+responsive section:
+
+```bash
+npm run dev
+```
