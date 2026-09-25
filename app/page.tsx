@@ -20,6 +20,30 @@ const journey = [
   'Dashboards and CRM update',
 ];
 
+const contextLayers = [
+  {
+    number: '01',
+    title: 'Dedicated context vaults',
+    copy: 'Give every fighter, sponsor, and product an isolated source of truth for voice, claims, contracts, campaign history, and approved assets.',
+    tags: ['Brand voice', 'Product facts', 'Sponsor rules'],
+    tone: 'amber',
+  },
+  {
+    number: '02',
+    title: 'Specialized AI workflows',
+    copy: 'Keep strategy separate from execution. Purpose-built assistants can brief, draft, schedule, analyze, and report without mixing responsibilities.',
+    tags: ['Campaign brief', 'Content studio', 'Performance analyst'],
+    tone: 'cyan',
+  },
+  {
+    number: '03',
+    title: 'Automated quality control',
+    copy: 'Run every output through structured checks for claim accuracy, required disclosures, brand fit, sponsor conflicts, and human approval.',
+    tags: ['Compliance', 'Guardrails', 'Approval queue'],
+    tone: 'violet',
+  },
+];
+
 const roadmap = [
   ['Phase 1', 'Website architecture, fighter onboarding, affiliate mapping, CRM data model'],
   ['Phase 2', 'Commerce site, fighter pages, dashboards, shared workspace, workflows'],
@@ -42,6 +66,7 @@ export default function Home() {
           <div className="navlinks">
             <a href="#platform">Platform</a>
             <a href="#crm">CRM</a>
+            <a href="#context">AI Context</a>
             <a href="#dashboards">Dashboards</a>
             <a href="#roadmap">Roadmap</a>
           </div>
@@ -131,6 +156,46 @@ export default function Home() {
               <li>AI assistance for captions, product descriptions, emails, blogs, FAQs, and recommendations.</li>
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section id="context" className="context-section">
+        <div className="container">
+          <div className="context-intro">
+            <div>
+              <p className="eyebrow">Context architecture &gt; AI adoption</p>
+              <h2>Make AI useful by giving it the right context—not more prompts.</h2>
+            </div>
+            <p>
+              Instead of copying details between docs, chats, and campaign tools, CF Sport can turn its existing
+              athlete data into a governed context layer that powers every AI-assisted workflow.
+            </p>
+          </div>
+
+          <div className="context-stack" aria-label="Three-layer AI context architecture">
+            {contextLayers.map((layer, index) => (
+              <article className={`context-layer ${layer.tone}`} key={layer.number}>
+                <div className="layer-number">{layer.number}</div>
+                <div className="layer-core" aria-hidden="true">
+                  <span className="core-light" />
+                  <span className="core-grid" />
+                </div>
+                <div className="layer-content">
+                  <p className="layer-kicker">Layer {index + 1}</p>
+                  <h3>{layer.title}</h3>
+                  <p>{layer.copy}</p>
+                  <div className="layer-tags">
+                    {layer.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="context-outcome">
+            <span>One governed pipeline</span>
+            <strong>Source data → AI workflow → validated output → human approval</strong>
+          </div>
         </div>
       </section>
 
